@@ -1,0 +1,7 @@
+from sympy import *
+(x,y)=symbols("x,y")
+que=(x+y)
+sol=integrate(que,(y,0,2))
+sol1=integrate(sol,(x,0,1))
+print(sol1)  
+
