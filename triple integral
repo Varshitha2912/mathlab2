@@ -1,0 +1,19 @@
+1.constant limits
+
+from sympy import*
+(x,y,z)=symbols("x,y,z")
+que=(x+y+z)
+sol=integrate(que,(z,0,3))
+sol1=integrate(sol,(y,0,2))
+sol2=integrate(sol1,(x,0,1))
+print(sol2)
+
+2.variable limits
+
+from sympy import*
+(x,y,z)=symbols("x,y,z")
+que=(x*y)
+sol=integrate(que,(z,0,x+y))
+sol1=integrate(sol,(y,x**2,sqrt(x)))
+sol2=integrate(sol1,(x,0,1))
+print(sol2)
