@@ -1,0 +1,5 @@
+import sympy as sp
+t,s=sp.symbols("t,s")
+f=sp.expand(1/(s+3)**3)
+sol=sp.inverse_laplace_transform(f,s,t)
+print(sol)
