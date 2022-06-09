@@ -1,0 +1,32 @@
+#1
+from sympy import *
+(x,y)=symbols('x,y')
+y=x**2
+dy=diff(y,x)
+q=x*dy-y*dx
+soln=integrate(q,(x,0,1))
+print(soln)
+
+#2.1
+from sympy import *
+(x,y,z,t)=symbols('x,y,z,t')
+x=exp(t)
+y=exp(-t)
+z=t**2
+dx=diff(x,t)
+dy=diff(y,t)
+dz=diff(z,t)
+q=(x*y)*dx+(x**2*z)*dy+(x*y*z)*dz
+soln=integrate(q,(t,0,1))
+print(soln)
+
+#2.2
+from sympy import *
+(x,y,a,t)=symbols('x,y,a,t')
+x=4*cos(a)
+y=3*sin(a)
+dx=diff(x,a)
+dy=diff(y,a)
+q=(x+2*y)*dx+(4-2*x)*dy
+soln=integrate(q,(a,0,2*pi))
+print(soln)
