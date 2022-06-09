@@ -1,0 +1,5 @@
+from sympy import*
+t,s=symbols("t,s")
+f=expand(2*sin(t)*sin(3*t))
+sol=laplace_transform(f,t,s)
+sol[0]
